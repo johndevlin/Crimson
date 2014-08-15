@@ -7,8 +7,9 @@
 /* Brand colours */
 
 $white: #ffffff; 
-$light-grey: #9eabb3;
-$grey: #444444;
+$lightgrey: #9eabb3;
+$grey: #6e777d;
+$darkgrey: #444444;
 
 $crimson: #a74a4a;
 
@@ -16,8 +17,9 @@ $crimson: #a74a4a;
 /* SASS colour calls */
 
 $base-colour: $crimson;
-$body-colour: $light-grey;
-$heading-colour: $grey;
+$body-colour: $lightgrey;
+$heading-colour: $darkgrey;
+$intro-colour: $grey;
 $background-colour: $white;
 
 
@@ -61,6 +63,11 @@ $merriweather: 'Merriweather', serif;
 
 %heading-typeface {
 	font-family: $lato;
+	font-weight: 900;
+}
+
+%small-heading-typeface {
+	font-family: $lato;
 	font-weight: 700;
 }
 
@@ -73,11 +80,6 @@ $merriweather: 'Merriweather', serif;
 	font-family: $lato;
 	font-style: italic;
 	font-weight: 300;
-}
-
-%heading-typeface {
-	font-family: $lato;
-	font-weight: 700;
 }
 
 
@@ -107,7 +109,7 @@ $bourbon-neat: true!default;
 
 /* A.2: Fill out the maximum width, and number of grids for Desktop, Tablet and Mobile */ 
 
-$desktop-width: 1300px!default;
+$desktop-width: 1140px!default;
 $desktop-grids: 12!default;
 
 $small-desktop-width: 1139px!default;

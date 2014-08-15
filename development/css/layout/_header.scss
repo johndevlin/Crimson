@@ -4,11 +4,10 @@ header {
 	padding: 90px $container-padding;
 
 	nav {
-		@include position(absolute, 20px auto auto);
-		@include clearfix;
+		
 	
 		.blog-avatar {
-			float: left;
+			@include position(absolute, 20px auto auto 20px);
 			margin: 0;
 			
 			a {
@@ -33,9 +32,29 @@ header {
 		}
 		
 		ul {
-			display: none;
-			float: right;
+			@include position(absolute, 20px 20px auto auto);
 			@include clearfix;
+			margin: 0;
+			padding: 0;
+			
+			li {
+				@include inline-block;
+				margin: 0 0 0 5px;
+			}
+			
+			a,
+			span {
+				@include size(30px);
+				background: $base-colour;
+				border-radius: 30px;
+				display: block;
+				text-indent: -9999px;
+				position: relative;
+			}
+			
+			span {
+				cursor: pointer;
+			}
 		}
 	}
 	
@@ -45,16 +64,16 @@ header {
 	}
 
 	h1 {
-		color: $grey;
+		color: $heading-colour;
+		font-size: em(80);
 		line-height: 1;
 		margin: 0 0 0.5em; 
 	}
 	
 	p.bio {
-		// color: darken($light-grey, 20%);
 		color: $base-colour;
 		font-size: em(28);
-		line-height: 1.2;
+		line-height: 1.4;
 		margin: 0; 
 	}
 

@@ -7,42 +7,67 @@ body {
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
 }
+
 h1, h2, h3, h4, h5, h6 {
 	@extend %heading-typeface;
 	color: $heading-colour;
 	line-height: 1.2;
-	margin: 1em 0 0.5em; 
+	margin: 1em 0 0; 
 	padding: 0;
 	text-rendering: optimizeLegibility;
 }
 
 h1 {
-	font-size: em(64); 
+	font-size: em(60); 
 }
 
 h2 {
-	font-size: em(36);
+	font-size: em(42);
 }
 
 h3 {
-	font-size: em(28);
+	@extend %small-heading-typeface;
+	color: $intro-colour;
+	font-size: em(34);
 }
 
 h4 {
-	font-size: em(24);
+	color: $intro-colour;
+	font-size: em(27);
 }
 
 h5 {
-	font-size: em(21);
+	color: $intro-colour;
+	font-size: em(22);
 }
 
 h6 {
 	@extend %base-typeface; 
-	font-size: em(18);
+	color: $intro-colour;
+	font-size: em(22);
+}
+
+p {
+	@extend %base-typeface;
+	color: $body-colour;
+	font-size: em(22);
+	line-height: 1.5;
+	margin: 1em 0 0; 
+}
+
+p a {
+	color: $base-colour;
+}
+
+p.intro {
+	@extend %intro-typeface;
+	color: $intro-colour;
+	font-size: em(34);
+	line-height: 1.3;
 }
 
 ul {
-	font-size: em(18);
+	font-size: em(22);
 	margin: 1.5em 0;
 	
 	li {
@@ -53,27 +78,19 @@ ul {
 	}
 }
 
-p {
-	@extend %base-typeface;
-	color: $body-colour;
-	font-size: em(18);
-	line-height: 1.6;
-	margin: 1.5em 0; 
-}
-
-p a {
-	color: $base-colour;
-}
-
-p.intro {
-	@extend %intro-typeface;
-}
-
 blockquote {
 	@extend %quote-typeface;
 }
 
 
+h1 + p,
+h1 + p.intro,
+h2 + p,
+h3 + p,
+h1 + h2,
+h2 + h3 {
+	margin-top: 0.5em;
+}
 
 
 
