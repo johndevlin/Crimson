@@ -1,0 +1,61 @@
+
+header {
+	background: url('../img/ptrn.png');
+	padding: 90px $container-padding;
+
+	nav {
+		@include position(absolute, 20px auto auto);
+		@include clearfix;
+	
+		.blog-avatar {
+			float: left;
+			margin: 0;
+			
+			a {
+				@include size(40px);
+				background: url('../img/avatar.png');
+				background-size: contain;
+				box-shadow: 0 2px 0 rgba(0,0,0,0.15);
+				border-radius: 40px;
+				display: block;
+				text-indent: -9999px;
+				
+				&:hover {
+					@include transform(translateY(-2px));
+					box-shadow: 0 2px 8px rgba(0,0,0,0.15); 
+				}
+				
+				&:active {
+					@include transform(translateY(0px));
+					box-shadow: 0 1px 0 rgba(0,0,0,0.3);
+				}
+			}
+		}
+		
+		ul {
+			display: none;
+			float: right;
+			@include clearfix;
+		}
+	}
+	
+	h1,
+	p.bio {
+		text-align: center;
+	}
+
+	h1 {
+		color: $grey;
+		line-height: 1;
+		margin: 0 0 0.5em; 
+	}
+	
+	p.bio {
+		// color: darken($light-grey, 20%);
+		color: $base-colour;
+		font-size: em(28);
+		line-height: 1.2;
+		margin: 0; 
+	}
+
+}
